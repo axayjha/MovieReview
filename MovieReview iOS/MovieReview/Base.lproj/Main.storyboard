@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MovieReview" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Movie title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qjq-ju-oAD">
+                                <rect key="frame" x="40" y="64" width="334" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="movieTitleChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="RSr-hK-mEy"/>
+                                </connections>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="hM9-Fi-cOr">
+                                <rect key="frame" x="40" y="108" width="334" height="128"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="a8w-z9-3a5"/>
+                                </constraints>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rating: 2.5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bqj-4I-C6p">
+                                <rect key="frame" x="40" y="246" width="334" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="2.5" minValue="0.0" maxValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="xoh-5l-FU0">
+                                <rect key="frame" x="38" y="277" width="338" height="31"/>
+                                <connections>
+                                    <action selector="sliderChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="Fj8-dq-CUM"/>
+                                </connections>
+                            </slider>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="hM9-Fi-cOr" firstAttribute="top" secondItem="qjq-ju-oAD" secondAttribute="bottom" constant="10" id="0jt-9t-PwV"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xoh-5l-FU0" secondAttribute="trailing" constant="40" id="2BR-dL-f1f"/>
+                            <constraint firstItem="xoh-5l-FU0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="4F4-f2-vrA"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qjq-ju-oAD" secondAttribute="trailing" constant="40" id="Ibl-Kc-lBn"/>
+                            <constraint firstItem="bqj-4I-C6p" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="Kq0-qj-4xF"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bqj-4I-C6p" secondAttribute="trailing" constant="40" id="OrY-8k-J3u"/>
+                            <constraint firstItem="bqj-4I-C6p" firstAttribute="top" secondItem="hM9-Fi-cOr" secondAttribute="bottom" constant="10" id="Smd-XK-79R"/>
+                            <constraint firstItem="hM9-Fi-cOr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="Tr9-d8-Jll"/>
+                            <constraint firstItem="qjq-ju-oAD" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="awc-CK-bfe"/>
+                            <constraint firstItem="xoh-5l-FU0" firstAttribute="top" secondItem="bqj-4I-C6p" secondAttribute="bottom" constant="10" id="rP6-FU-bGi"/>
+                            <constraint firstItem="qjq-ju-oAD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="uzb-za-QDu"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hM9-Fi-cOr" secondAttribute="trailing" constant="40" id="wmp-QN-wKn"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="movieReview" destination="hM9-Fi-cOr" id="9Kk-mY-Frs"/>
+                        <outlet property="movieTitle" destination="qjq-ju-oAD" id="6XQ-Z6-B3c"/>
+                        <outlet property="ratings" destination="xoh-5l-FU0" id="Ijg-L0-tXM"/>
+                        <outlet property="ratingsLabel" destination="bqj-4I-C6p" id="ygM-t5-bof"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="132" y="138"/>
+        </scene>
+    </scenes>
+</document>
